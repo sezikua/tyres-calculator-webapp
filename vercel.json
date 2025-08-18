@@ -31,8 +31,5 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ],
-  "functions": {},
-  "outputDirectory": ".",
-  "framework": null
+  ]
 }
