@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Шинний калькулятор</title>
+    <meta name="description" content="Сучасний калькулятор для розрахунку параметрів шин сільгосптехніки">
+    <meta name="author" content="Костров Сергій">
+    <meta name="theme-color" content="#008e4e">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="https://www.agrotyres.com.ua/wp-content/uploads/2024/02/logotype_en-e1708948639392.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="https://www.agrotyres.com.ua/wp-content/uploads/2024/02/logotype_en-e1708948639392.png">
+    <link rel="apple-touch-icon" href="https://www.agrotyres.com.ua/wp-content/uploads/2024/02/logotype_en-e1708948639392.png">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <img src="https://www.agrotyres.com.ua/wp-content/uploads/2024/02/logotype_en-e1708948639392.png" alt="Agrotyres Logo" class="logo">
+                <h1>Шинний калькулятор</h1>
+                <p class="subtitle">Розрахунок параметрів шин для сільгосптехніки</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <form id="tire-form" class="calculator-form">
+                <div class="input-group">
+                    <label for="tire1" class="input-label">
+                        <span class="label-icon">🔴</span>
+                        Перший розмір шини
+                    </label>
+                    <input type="text" id="tire1" class="tire-input" placeholder="600/70R30" maxlength="11" required inputmode="decimal">
+                    <div class="input-hint">Формат: ширина/профільRдіаметр</div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="tire2" class="input-label">
+                        <span class="label-icon">🔵</span>
+                        Другий розмір шини (опціонально)
+                    </label>
+                    <input type="text" id="tire2" class="tire-input" placeholder="710/70R42" maxlength="11" inputmode="decimal">
+                    <div class="input-hint">Для порівняння двох розмірів</div>
+                </div>
+
+                <button type="submit" class="calculate-btn">
+                    <span class="btn-icon">🧮</span>
+                    Розрахувати
+                </button>
+            </form>
+
+            <!-- Results Section -->
+            <div id="result" class="results-container"></div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <button class="action-btn" onclick="clearForm()">
+                    <span class="btn-icon">🗑️</span>
+                    Очистити
+                </button>
+                <button class="action-btn" onclick="shareResults()">
+                    <span class="btn-icon">📤</span>
+                    Поділитися
+                </button>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="footer-content">
+                <p>© ТОВ "Агро-Солар" | Розроблено Костров Сергій</p>
+                <a href="https://www.agrotyres.com.ua/" class="website-link" target="_blank">
+                    agrotyres.com.ua
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>Розраховуємо...</p>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>

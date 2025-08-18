@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Приклад використання - Шинний калькулятор</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .demo-section {
+            background: linear-gradient(135deg, #f0f8ff, #e6f3ff);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border-left: 4px solid #2481cc;
+        }
+        
+        .demo-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .demo-example {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .demo-example h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .demo-result {
+            background: var(--tg-theme-secondary-bg-color);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        
+        .demo-note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <img src="https://www.agrotyres.com.ua/wp-content/uploads/2024/02/logotype_en-e1708948639392.png" alt="Agrotyres Logo" class="logo">
+                <h1>Приклад використання</h1>
+                <p class="subtitle">Демонстрація роботи шинного калькулятора</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="demo-section">
+                <h2>🎯 Популярні розміри шин</h2>
+                <p>Ось приклади розмірів шин, які часто використовуються в сільгосптехніці:</p>
+                
+                <div class="demo-examples">
+                    <div class="demo-example">
+                        <h4>🔴 Трактори John Deere</h4>
+                        <p><strong>600/70R30</strong> - Передні колеса</p>
+                        <p><strong>710/70R42</strong> - Задні колеса</p>
+                        <div class="demo-result">
+                            Висота: 1,177.40 мм<br>
+                            Окружність: 3,698.36 мм<br>
+                            Об'єм: 0.82 м³<br>
+                            Вага: 177.40 кг
+                        </div>
+                    </div>
+                    
+                    <div class="demo-example">
+                        <h4>🔵 Комбайни Claas</h4>
+                        <p><strong>650/75R38</strong> - Основні колеса</p>
+                        <p><strong>480/80R46</strong> - Додаткові колеса</p>
+                        <div class="demo-result">
+                            Висота: 1,212.10 мм<br>
+                            Окружність: 3,807.99 мм<br>
+                            Об'єм: 0.89 м³<br>
+                            Вага: 212.10 кг
+                        </div>
+                    </div>
+                    
+                    <div class="demo-example">
+                        <h4>🟡 Вантажні автомобілі</h4>
+                        <p><strong>315/80R22.5</strong> - Стандартний розмір</p>
+                        <p><strong>385/65R22.5</strong> - Широкий профіль</p>
+                        <div class="demo-result">
+                            Висота: 1,071.00 мм<br>
+                            Окружність: 3,365.94 мм<br>
+                            Об'єм: 0.39 м³<br>
+                            Вага: 71.00 кг
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>📊 Приклади порівнянь</h2>
+                <p>Як використовувати калькулятор для порівняння розмірів:</p>
+                
+                <div class="demo-examples">
+                    <div class="demo-example">
+                        <h4>Порівняння 1: Збільшення розміру</h4>
+                        <p><strong>600/70R30</strong> → <strong>710/70R42</strong></p>
+                        <div class="demo-result">
+                            Різниця кліренсу: +42.30 мм<br>
+                            Співвідношення: 1.03<br>
+                            Збільшення висоти на 3%
+                        </div>
+                    </div>
+                    
+                    <div class="demo-example">
+                        <h4>Порівняння 2: Різні профілі</h4>
+                        <p><strong>480/80R46</strong> → <strong>480/95R46</strong></p>
+                        <div class="demo-result">
+                            Різниця кліренсу: +72.00 мм<br>
+                            Співвідношення: 1.05<br>
+                            Збільшення висоти на 5%
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-note">
+                <strong>💡 Порада:</strong> Використовуйте калькулятор для:
+                <ul>
+                    <li>Підбору запасних шин</li>
+                    <li>Розрахунку зміни кліренсу</li>
+                    <li>Порівняння різних розмірів</li>
+                    <li>Планування заміни шин</li>
+                </ul>
+            </div>
+
+            <!-- Calculator Form -->
+            <form id="tire-form" class="calculator-form">
+                <h2>🧮 Спробуйте калькулятор</h2>
+                
+                <div class="input-group">
+                    <label for="tire1" class="input-label">
+                        <span class="label-icon">🔴</span>
+                        Перший розмір шини
+                    </label>
+                    <input type="text" id="tire1" class="tire-input" placeholder="600/70R30" maxlength="11" required inputmode="decimal">
+                    <div class="input-hint">Спробуйте: 600/70R30 або 710/70R42</div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="tire2" class="input-label">
+                        <span class="label-icon">🔵</span>
+                        Другий розмір шини (опціонально)
+                    </label>
+                    <input type="text" id="tire2" class="tire-input" placeholder="710/70R42" maxlength="11" inputmode="decimal">
+                    <div class="input-hint">Для порівняння двох розмірів</div>
+                </div>
+
+                <button type="submit" class="calculate-btn">
+                    <span class="btn-icon">🧮</span>
+                    Розрахувати
+                </button>
+            </form>
+
+            <!-- Results Section -->
+            <div id="result" class="results-container"></div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <button class="action-btn" onclick="loadDemo()">
+                    <span class="btn-icon">📋</span>
+                    Завантажити демо
+                </button>
+                <button class="action-btn" onclick="clearForm()">
+                    <span class="btn-icon">🗑️</span>
+                    Очистити
+                </button>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="footer-content">
+                <p>© ТОВ "Агро-Солар" | Розроблено Костров Сергій</p>
+                <a href="https://www.agrotyres.com.ua/" class="website-link" target="_blank">
+                    agrotyres.com.ua
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>Розраховуємо...</p>
+    </div>
+
+    <script src="calculator.js"></script>
+    <script>
+        // Демонстраційна функція
+        function loadDemo() {
+            document.getElementById('tire1').value = '600/70R30';
+            document.getElementById('tire2').value = '710/70R42';
+            
+            // Haptic feedback
+            if (window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.HapticFeedback) {
+                window.Telegram.WebApp.HapticFeedback.impactOccurred('light');
+            }
+            
+            // Автоматичний розрахунок
+            setTimeout(() => {
+                calculateTires();
+            }, 500);
+        }
+        
+        // Додаємо функцію до глобального об'єкта
+        window.loadDemo = loadDemo;
+    </script>
+</body>
+</html>

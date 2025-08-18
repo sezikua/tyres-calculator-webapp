@@ -1,0 +1,49 @@
+{
+  "name": "Шинний калькулятор",
+  "short_name": "ТиреКальк",
+  "description": "Сучасний калькулятор для розрахунку параметрів шин сільгосптехніки",
+  "version": "1.0.0",
+  "author": "Костров Сергій",
+  "company": "ТОВ 'Агро-Солар'",
+  "website": "https://www.agrotyres.com.ua/",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#008e4e",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "uk",
+  "dir": "ltr",
+  "categories": ["utilities", "business", "productivity"],
+  "icons": [
+    {
+      "src": "https://www.agrotyres.com.ua/wp-content/uploads/2024/02/logotype_en-e1708948639392.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "features": [
+    "Розрахунок висоти шини",
+    "Розрахунок довжини окружності",
+    "Розрахунок об'єму шини",
+    "База даних ваги шин",
+    "Порівняння двох розмірів",
+    "Адаптивний дизайн",
+    "Telegram Web App інтеграція"
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "screenshot2.png", 
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}

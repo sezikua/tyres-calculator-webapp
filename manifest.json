@@ -1,0 +1,64 @@
+{
+  "name": "Шинний калькулятор",
+  "short_name": "ТиреКальк",
+  "description": "Сучасний калькулятор для розрахунку параметрів шин сільгосптехніки",
+  "version": "1.0.0",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#008e4e",
+  "background_color": "#ffffff",
+  "scope": "/",
+  "lang": "uk",
+  "dir": "ltr",
+  "categories": ["utilities", "business", "productivity"],
+  "icons": [
+    {
+      "src": "https://www.agrotyres.com.ua/wp-content/uploads/2024/02/logotype_en-e1708948639392.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://www.agrotyres.com.ua/wp-content/uploads/2024/02/logotype_en-e1708948639392.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Шинний калькулятор - основний інтерфейс"
+    },
+    {
+      "src": "screenshot2.png", 
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Шинний калькулятор - мобільна версія"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Новий розрахунок",
+      "short_name": "Розрахувати",
+      "description": "Відкрити калькулятор для нового розрахунку",
+      "url": "/",
+      "icons": [
+        {
+          "src": "https://www.agrotyres.com.ua/wp-content/uploads/2024/02/logotype_en-e1708948639392.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}

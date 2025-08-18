@@ -1,0 +1,46 @@
+{
+  "name": "tyres-calculator-webapp",
+  "version": "1.0.0",
+  "description": "Сучасний Web Apps для Telegram - Шинний калькулятор для сільгосптехніки",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "dev": "serve . -p 3000",
+    "build": "echo 'No build step required for static site'",
+    "deploy": "echo 'Deploy using your preferred platform'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "telegram",
+    "webapp",
+    "calculator",
+    "tyres",
+    "agriculture",
+    "farming",
+    "tractor",
+    "ukraine"
+  ],
+  "author": "Костров Сергій",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/tyres-calculator-webapp.git"
+  },
+  "homepage": "https://your-domain.com",
+  "bugs": {
+    "url": "https://github.com/username/tyres-calculator-webapp/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
